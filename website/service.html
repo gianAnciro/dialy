@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+
+
+
+
+
+
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/C0fJ3x2epMylvY7T/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+    </head>
+    <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      Services
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="service.html">Services</a>
+    <a href="records.html">Records</a>
+  </div>
+</div>
+
+</br>
+</br>
+
+
+<center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<label>
+"tell me about your day" - Dialy
+</label>
+
+
+</br></br>
+	<form id="myForm">
+		<label>date</label></br>
+		<input name="date" />
+		<br/></br>
+		<label>entry</label>
+</br>
+<textarea id="entry" name="entry">
+
+</textarea>
+		<br/>
+	</form>
+	<button onclick='SubForm()'>Submit</button>
+</center>
+
+
+
+        <script src="" async defer></script>
+    </body>
+</html>
